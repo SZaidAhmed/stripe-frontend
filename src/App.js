@@ -15,7 +15,7 @@ export default function App() {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:8000/api/v1/stripe/create-payment-intent", {
+    fetch("https://sgi-stripe.herokuapp.com/api/v1/stripe/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ id: "xl-tshirt" }] , userName:"zaid" }),
